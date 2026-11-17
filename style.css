@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: radial-gradient(circle at top, #172441, #080b14 65%);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 55px 25px;
+  text-align: center;
+  background: linear-gradient(145deg, #151b2d, #090d18);
+  border: 1px solid #263b5e;
+  border-radius: 25px;
+  box-shadow: 0 0 60px #0066ff20;
+}
+
+.tag {
+  color: #00d9ff;
+  font-size: 11px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(24px, 5vw, 42px);
+  color: #fff;
+  text-shadow: 0 0 20px #00d9ff55;
+}
+
+.subtitle {
+  color: #9ba9c3;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.date-info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 45px auto 20px;
+  color: #8ca5c5;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.time-box {
+  width: 150px;
+  padding: 25px 10px;
+  background: #101a2e;
+  border: 1px solid #00bfff55;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00bfff15;
+}
+
+.time-box span {
+  display: block;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(32px, 6vw, 55px);
+  color: #00d9ff;
+  font-weight: 700;
+}
+
+.time-box small {
+  display: block;
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #8ca5c5;
+}
+
+.colon {
+  font-size: 35px;
+  color: #00d9ff;
+}
+
+.progress {
+  width: 90%;
+  height: 8px;
+  margin: 40px auto 20px;
+  background: #26334b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #00d9ff, #00ff95);
+  transition: width 0.3s linear;
+}
+
+#status {
+  color: #00ff95;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 25px 0;
+}
+
+.message {
+  margin-top: 40px;
+  padding: 25px;
+  border-top: 1px solid #263b5e;
+}
+
+.message h3 {
+  color: #00d9ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.message p {
+  color: #9ba9c3;
+  line-height: 2;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 35px;
+  color: #73849f;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000000ed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.popup-overlay.show {
+  display: flex;
+}
+
+.popup {
+  width: 100%;
+  max-width: 420px;
+  padding: 45px 25px;
+  text-align: center;
+  background: #111a2c;
+  border: 1px solid #00d9ff;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #00d9ff55;
+  animation: appear 0.6s ease;
+}
+
+.emoji {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.popup h2 {
+  color: #00d9ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+}
+
+.popup p {
+  color: white;
+  font-size: 17px;
+  margin-top: 18px;
+}
+
+.popup .small {
+  color: #9ba9c3;
+  font-size: 12px;
+}
+
+.heart {
+  font-size: 35px;
+  margin-top: 20px;
+  animation: beat 1s infinite;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 35px 12px;
+  }
+
+  .timer {
+    gap: 5px;
+  }
+
+  .time-box {
+    width: 30%;
+    padding: 18px 5px;
+  }
+
+  .colon {
+    font-size: 22px;
+  }
+
+  .date-info {
+    font-size: 9px;
+  }
+}
